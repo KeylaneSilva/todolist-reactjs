@@ -5,16 +5,19 @@ import Button from './Button';
 
 const AddTask = ({handleTaskAddition}) => {
 
-    //armazendo valores do input
     const [inputData, setInputData] = useState('');
 
+    // CAPTURA O VALOR DO INPUT
     const handleInputChange = (e) => {
         setInputData(e.target.value);
     }
 
+    // ADICIONA UMA NOVA TASK
     const handleAddTaskClick = () => {
         handleTaskAddition(inputData);
+        setInputData('');
     }
+
 
     return (
         <div className='add-task-container'>
